@@ -1,0 +1,129 @@
+----------
+SHORTCUTS:
+----------
+1.TO OPEN TERMINAL:   ALT+CTRL+T
+2.TO OPEN PROPERTIES: CTRL+I
+
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+---------
+TO ENABLE:
+---------
+
+1.SSH:
+        sudo apt install openssh-server
+2.GPIO:
+        sudo apt-get install mercurial
+        sudo pip install hg+http://hg.code.sf.net/p/raspberry-gpio-python/code#egg=RPi.GPIO
+3.SPIDEV:
+	sudo pip install spidev
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+
+-----------------------
+TO CONNECT THROUGH SSH:
+-----------------------
+1.TO ENABLE SSH TYPE IN RASPBERRY PI COMMAND PROMPT.(FIRST TIME ONLY)
+        sudo apt install openssh-server
+
+2.TYPE IN LAP COMMAND PROMPT.
+        ssh rasp_device_name@ipaddress
+  eg: ssh psmtx@192.168.29.83
+      ssh psmrx@192.168.29.10
+
+3.IF REMOTE HOST IDENTIFICATION HAS CHANGED.
+       ssh-keygen -R ipaddress
+       Are you sure you want to continue connecting(yes/no)?
+   eg: ssh-keygen -R 192.168.29.10
+
+4.IT WILL PROMPT TO TYPE PASSWORD.(will not display password we type)
+      rasp_device_name@ipaddress password: 1234
+
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+
+--------------------------
+TO CONNECT THROUGH WinSCP:
+--------------------------
+
+1.HOST NAME:
+      psmtx-desktop
+
+2.USERID:
+      psmtx
+
+3.PASSWORD:
+      1234
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+
+------------------------------
+TO CONNECT THROUGH VNC SERVER:
+------------------------------
+1.MAKE DIRECTORY.
+      mkdir -p ~/.vnc
+
+2.CREATE A VNC PASSWORD.
+      vncpasswd
+
+3.IT WILL ASK FOR PASSWORD TYPE A PASSWORD WITH MIN LENGTH OF 6.(will not display password we type)
+      Password:1234567
+      Verify:1234567
+      Would you like to enter a view-only password (y/n)? n
+
+4.ESTABLISH THE SERVER LINK.(WILL WORK ONLY WHEN THERE IS A DISPLAY CONNECTED)
+      x0vncserver -passwordfile ~/.vnc/passwd -display :0
+
+5.OPEN VNC SERVER AND TYPE THE IP ADDRESS AND CONNECT.
+
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+
+------------------------------------------
+COMMAND TO INSTALL LIBRARIES AND SOFTWARES:
+------------------------------------------
+1.INSTALLING PYTHON3.
+        sudo apt-get install python3
+-------------------------------------------------
+2.UPDATING UBUNTU.
+        sudo apt-get update 
+        sudo apt-get upgrade
+-------------------------------------------------
+3.INSTALLING IMUTILS.
+        sudo pip install imutils
+-------------------------------------------------
+4.INSTALLING NUMPY.
+        sudo apt-get install python3-numpy
+-------------------------------------------------
+5.INSTALLING SYMPY.
+        sudo apt-get install python3-sympy
+-------------------------------------------------
+6.INSTALLING OPENCV.
+        sudo apt install python3-opencv
+-------------------------------------------------
+7.INSTALLING PYTESSERACT.
+        sudo pip install pytesseract
+        sudo apt-get install tesseract-ocr
+-------------------------------------------------
+8.INSTALLING MATPLOTLIB.
+        sudo apt-get install python3-matplotlib
+-------------------------------------------------
+9.INSTALLING SQLITE BROWSER IN UBUNTU.
+	sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
+	sudo apt-get update
+	sudo apt-get install sqlitebrowser
+-------------------------------------------------
+10.TO ENABLE GPIO PINS IN UBUNTU.
+        sudo apt-get install mercurial
+        sudo pip install hg+http://hg.code.sf.net/p/raspberry-gpio-python/code#egg=RPi.GPIO
+-------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+
